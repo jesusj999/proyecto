@@ -103,7 +103,7 @@ $grupos = $conn->query("SELECT gr.*, g.descripcion as grado_desc, s.nombre as se
                         ORDER BY s.nombre, g.idgrado, gr.nombre");
 $materias = $conn->query("SELECT * FROM materias ORDER BY idMateria");
 
-include '../includes/header.php';
+include './includes./header.php';
 ?>
 
 <div class="page-header">
@@ -328,4 +328,4 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 </script>
 
-<?php include '../includes/footer.php'; ?>
+<?php include './includes./footer.php'; ?>

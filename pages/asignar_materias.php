@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'asignar') {
             continue;
         }
 
-        if ($conn->query("INSERT INTO horario (idDocente, idMateria, idgrupo, año, idgrado, idsede)
-                          VALUES ($docente, $materia, $grupo, $anio, $grado, $sede)")) {
+        if ($conn->query("INSERT INTO horario (idDocente, idMateria, idGrupo, año, idGrado, idSede)
+                            VALUES ($docente, $materia, $grupo, $anio, $grado, $sede)")) {
             $insertados++;
         }
     }

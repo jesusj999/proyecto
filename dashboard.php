@@ -30,7 +30,7 @@ include 'includes/header.php';
 </div>
 
 <?php if (isset($_GET['error'])): ?>
-<div class="alert alert-error">⚠️ No tiene permisos para acceder a esa sección.</div>
+<div class="alert alert-error">⚠️ No tiene permisos para acceder.</div>
 <?php endif; ?>
 
 <?php if (isset($_GET['msg'])): ?>

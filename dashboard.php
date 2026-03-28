@@ -25,12 +25,12 @@ include 'includes/header.php';
 <div class="page-header">
     <div>
         <div class="page-title">Panel de Inicio</div>
-        <div class="page-subtitle">Bienvenido al Sistema de Administración de Notas — <?= $anio_actual ?></div>
+        <div class="page-subtitle">Bienvenido al Sistema de Notas — <?= $anio_actual ?></div>
     </div>
 </div>
 
 <?php if (isset($_GET['error'])): ?>
-<div class="alert alert-error">⚠️ No tiene permisos para acceder a esa sección.</div>
+<div class="alert alert-error">⚠️ No tiene permisos para acceder.</div>
 <?php endif; ?>
 
 <?php if (isset($_GET['msg'])): ?>

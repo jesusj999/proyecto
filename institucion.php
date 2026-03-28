@@ -103,11 +103,7 @@ $grupos = $conn->query("SELECT gr.*, g.descripcion as grado_desc, s.nombre as se
                         ORDER BY s.nombre, g.idgrado, gr.nombre");
 $materias = $conn->query("SELECT * FROM materias ORDER BY idMateria");
 
-<<<<<<< HEAD
-include './includes./header.php';
-=======
 include '../proyecto/includes/header.php';
->>>>>>> 2baeb91cb724875f62c742603a2e332ef39576d2
 ?>
 
 <div class="page-header">

@@ -200,26 +200,6 @@ include '../includes/header.php';
 </div>
 <?php endif; ?>
 
-<script>
-function selAll(estado) {
-    document.querySelectorAll('.cb-promover').forEach(cb => cb.checked = estado);
-}
-
-function cargarGruposProm() {
-    const grado = document.getElementById('sel_grado_prom').value;
-    const sel = document.getElementById('sel_grupo_prom');
-    if (!grado) return;
-    fetch(`/ajax/get_grupos.php?grado=${grado}`)
-        .then(r => r.json())
-        .then(data => {
-            sel.innerHTML = '<option value="">— Seleccionar Grupo —</option>';
-            data.forEach(g => sel.innerHTML += `<option value="${g.idGrupo}">${g.nombre} (${g.sede})</option>`);
-        });
-}
-
-// Si ya hay grado seleccionado, cargar grupos
-const gradoSel = document.getElementById('sel_grado_prom').value;
-if (gradoSel) cargarGruposProm();
-</script>
+<script src="../js/cargar_grupos.js"></script>
 
 <?php include '../includes/footer.php'; ?>

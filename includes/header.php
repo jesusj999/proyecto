@@ -1,4 +1,5 @@
 <?php
+// auntenticacion y logueo para que cualquier persona no esntre
 require_once __DIR__ . '/config.php';
 requireAuth();
 
@@ -8,72 +9,39 @@ $nivel = $_SESSION['nivel'] ?? 3;
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $pageTitle ?? 'Sistema de Notas' ?> — Centro Educativo La Florida</title>
+    <title> — Centro Educativo La Florida</title>
     <link rel="stylesheet" href="/proyecto/style.css">
 </head>
+
 <body>
 
-<header class="header">
-    <div class="header-top">
-        <div class="header-brand">
-            <div class="header-logo">🏫</div>
-            <div class="header-title">
-                <h1>CENTRO EDUCATIVO LA FLORIDA</h1>
-                <p>Sistema de Información para la Administración de Notas con Metodología Escuela Nueva</p>
-            </div>
-        </div>
-        <div class="header-user">
-            <div class="user-name"><?= htmlspecialchars($nombre_usuario) ?></div>
-            <div class="user-role"><?= htmlspecialchars($rol_usuario) ?></div>
-            <a href="../proyecto/logout.php" class="salir">🔒 Salir seguro</a>
-        </div>
-    </div>
-    <nav class="navbar">
-        <div class="nav-item">
-            <a href="../../proyecto/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : '' ?>">Inicio</a>
-        </div>
-        <?php if ($nivel <= 2): ?>
-        <div class="nav-item">
-            <a href="#" class="nav-link">Registros ▾</a>
-            <div class="dropdown">
-                <?php if ($nivel == 1): ?>
-                <a href="../../proyecto/pages/personas.php">👤 Personas</a>
-                <a href="../../proyecto/institucion.php">🏫 Institución</a>
-                <a href="../../proyecto/pages/usuarios.php">🔑 Usuarios</a>
-                <a href="../../proyecto/pages/asignar_materias.php">📚 Asignar Materias</a>
-                <?php endif; ?>
-                <a href="../../proyecto/logros.php">🏆 Logros</a>
-            </div>
-        </div>
-        <?php endif; ?>
-        <?php if ($nivel == 1): ?>
-        <div class="nav-item">
-            <a href="#" class="nav-link">Matrícula ▾</a>
-            <div class="dropdown">
-                <a href="../pages/matricula.php">📋 Matrícula</a>
-                <a href="../pages/promocion.php">🎓 Promoción</a>
-            </div>
-        </div>
-        <?php endif; ?>
-        <div class="nav-item">
-            <a href="#" class="nav-link">Listar ▾</a>
-            <div class="dropdown">
-                <a href="../pages/listar_grupos.php">👥 Grupos</a>
-                <a href="../pages/notas_estudiante.php">📊 Notas de Estudiante</a>
-            </div>
-        </div>
-        <?php if ($nivel <= 2): ?>
-        <div class="nav-item">
-            <a href="#" class="nav-link">Calificar ▾</a>
-            <div class="dropdown">
-                <a href="../../proyecto/pages/calificar.php">✏️ calificar grupo</a>
-            </div>
-        </div>
-        <?php endif; ?>
-    </nav>
-</header>
+    <header class="header">
+        <div class="header-top">
 
-<main class="main-content">
+            <div class="header-brand">
+                <div class="header-logo">🏫</div>
+                <div class="header-title">
+                    <h1>CENTRO EDUCATIVO LA FLORIDA</h1>
+                    <p>Sistema de Información para la Administración de Notas con Metodología Escuela Nueva</p>
+                </div>
+            </div>
+
+            <nav class="navbar" style="margin-right: 350px;">
+                <a href="/proyecto/dashboard.php" class="nav-link">Inicio</a>
+            </nav>
+
+
+            <div class="header-user">
+                <div class="user-name"><?= htmlspecialchars($nombre_usuario) ?></div>
+                <div class="user-role"><?= htmlspecialchars($rol_usuario) ?></div>
+                <a href="/proyecto/logout.php" class="salir">🔒 Salir seguro</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main-content">

@@ -28,24 +28,24 @@ $nivel = $_SESSION['nivel'] ?? 3;
         <div class="header-user">
             <div class="user-name"><?= htmlspecialchars($nombre_usuario) ?></div>
             <div class="user-role"><?= htmlspecialchars($rol_usuario) ?></div>
-            <a href="/logout.php" class="salir">🔒 Salir seguro</a>
+            <a href="../proyecto/logout.php" class="salir">🔒 Salir seguro</a>
         </div>
     </div>
     <nav class="navbar">
         <div class="nav-item">
-            <a href="/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : '' ?>">Inicio</a>
+            <a href="../../proyecto/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : '' ?>">Inicio</a>
         </div>
         <?php if ($nivel <= 2): ?>
         <div class="nav-item">
             <a href="#" class="nav-link">Registros ▾</a>
             <div class="dropdown">
                 <?php if ($nivel == 1): ?>
-                <a href="/pages/personas.php">👤 Personas</a>
-                <a href="/pages/institucion.php">🏫 Institución</a>
-                <a href="/pages/usuarios.php">🔑 Usuarios</a>
-                <a href="/pages/asignar_materias.php">📚 Asignar Materias</a>
+                <a href="../../proyecto/pages/personas.php">👤 Personas</a>
+                <a href="../../proyecto/institucion.php">🏫 Institución</a>
+                <a href="../../proyecto/pages/usuarios.php">🔑 Usuarios</a>
+                <a href="../../proyecto/pages/asignar_materias.php">📚 Asignar Materias</a>
                 <?php endif; ?>
-                <a href="/pages/logros.php">🏆 Logros</a>
+                <a href="../../proyecto/logros.php">🏆 Logros</a>
             </div>
         </div>
         <?php endif; ?>
@@ -53,23 +53,23 @@ $nivel = $_SESSION['nivel'] ?? 3;
         <div class="nav-item">
             <a href="#" class="nav-link">Matrícula ▾</a>
             <div class="dropdown">
-                <a href="/pages/matricula.php">📋 Matrícula</a>
-                <a href="/pages/promocion.php">🎓 Promoción</a>
+                <a href="../pages/matricula.php">📋 Matrícula</a>
+                <a href="../pages/promocion.php">🎓 Promoción</a>
             </div>
         </div>
         <?php endif; ?>
         <div class="nav-item">
             <a href="#" class="nav-link">Listar ▾</a>
             <div class="dropdown">
-                <a href="/pages/listar_grupos.php">👥 Grupos</a>
-                <a href="/pages/notas_estudiante.php">📊 Notas de Estudiante</a>
+                <a href="../pages/listar_grupos.php">👥 Grupos</a>
+                <a href="../pages/notas_estudiante.php">📊 Notas de Estudiante</a>
             </div>
         </div>
         <?php if ($nivel <= 2): ?>
         <div class="nav-item">
             <a href="#" class="nav-link">Calificar ▾</a>
             <div class="dropdown">
-                <a href="/pages/calificar.php">✏️ Grupo</a>
+                <a href="../../proyecto/pages/calificar.php">✏️ calificar grupo</a>
             </div>
         </div>
         <?php endif; ?>

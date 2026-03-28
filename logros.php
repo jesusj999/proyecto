@@ -78,7 +78,7 @@ $grados = $conn->query("SELECT * FROM grado ORDER BY idgrado");
 $materias = $conn->query("SELECT * FROM materias ORDER BY nombre");
 $tipos = $conn->query("SELECT * FROM tipologro");
 
-include '../includes/header.php';
+include '../proyecto/includes/header.php';
 ?>
 
 <div class="page-header">

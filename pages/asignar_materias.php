@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'asignar') {
             continue;
         }
 
-        if ($conn->query("INSERT INTO horario (idDocente, idMateria, idgrupo, año, idgrado, idsede)
-                          VALUES ($docente, $materia, $grupo, $anio, $grado, $sede)")) {
+        if ($conn->query("INSERT INTO horario (idDocente, idMateria, idGrupo, año, idgrado, idsede)
+                            VALUES ($docente, $materia, $grupo, $anio, $grado, $sede)")) {
             $insertados++;
         }
     }
@@ -217,26 +217,6 @@ include '../includes/header.php';
 
 </div>
 
-<script>
-function cargarGrupos() {
-    const sede = document.getElementById('sel_sede').value;
-    const grado = document.getElementById('sel_grado_asig').value;
-    const sel_grupo = document.getElementById('sel_grupo_asig');
-
-    if (!sede || !grado) {
-        sel_grupo.innerHTML = '<option value="">— Primero seleccione sede y grado —</option>';
-        return;
-    }
-
-    fetch(`/ajax/get_grupos.php?sede=${sede}&grado=${grado}`)
-        .then(r => r.json())
-        .then(data => {
-            sel_grupo.innerHTML = '<option value="">— Seleccionar Grupo —</option>';
-            data.forEach(g => {
-                sel_grupo.innerHTML += `<option value="${g.idGrupo}">${g.nombre}</option>`;
-            });
-        });
-}
-</script>
+<script src="../js/cargar_grupos.js"></script>
 
 <?php include '../includes/footer.php'; ?>

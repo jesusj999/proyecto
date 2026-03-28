@@ -218,19 +218,6 @@ include '../includes/header.php';
 </div><!-- grid -->
 <?php endif; ?>
 
-<script>
-function cargarGruposMat() {
-    const sede = document.querySelector('[name="idSede"]').value;
-    const grado = document.getElementById('sel_grado_mat').value;
-    const sel = document.getElementById('sel_grupo_mat');
-    if (!sede || !grado) { sel.innerHTML = '<option value="">— Seleccionar Sede/Grado —</option>'; return; }
-    fetch(`/ajax/get_grupos.php?sede=${sede}&grado=${grado}`)
-        .then(r => r.json())
-        .then(data => {
-            sel.innerHTML = '<option value="">— Seleccionar Grupo —</option>';
-            data.forEach(g => sel.innerHTML += `<option value="${g.idGrupo}">${g.nombre}</option>`);
-        });
-}
-</script>
+<script src="../js/cargar_grupos.js"></script>
 
 <?php include '../includes/footer.php'; ?>

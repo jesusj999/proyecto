@@ -328,4 +328,4 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 </script>
 
-<?php include '../includes/footer.php'; ?>
+<?php include './includes./footer.php'; ?>

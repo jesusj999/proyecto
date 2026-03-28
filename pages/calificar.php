@@ -145,7 +145,7 @@ include '../includes/header.php';
                         <?php if ($grupo_sel): ?>
                         <option value="<?= $grupo_sel ?>" selected>Grupo actual</option>
                         <?php else: ?>
-                        <option value="">— Seleccionar Grado —</option>
+                        <option value="">— Seleccionar Grupo —</option>
                         <?php endif; ?>
                     </select>
                 </div>
@@ -363,19 +363,6 @@ include '../includes/header.php';
 </form>
 <?php endif; ?>
 
-<script>
-function cargarGruposCalif() {
-    const grado = document.querySelector('[name="idGrado"]').value;
-    const sel = document.getElementById('sel_grupo_cal');
-    if (!grado) { sel.innerHTML = '<option value="">— Seleccionar Grado —</option>'; return; }
-    fetch(`/ajax/get_grupos.php?grado=${grado}`)
-        .then(r => r.json())
-        .then(data => {
-            sel.innerHTML = '<option value="">— Seleccionar Grupo —</option>';
-            data.forEach(g => sel.innerHTML += `<option value="${g.idGrupo}">${g.nombre} (${g.sede})</option>`);
-        });
-}
-if (document.querySelector('[name="idGrado"]')?.value) cargarGruposCalif();
-</script>
+<script src="../js/cargar_grupos.js"></script>
 
 <?php include '../includes/footer.php'; ?>

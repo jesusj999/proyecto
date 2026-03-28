@@ -24,7 +24,7 @@ function requireAuth($niveles = [1, 2, 3]) {
         exit;
     }
     if (!in_array($_SESSION['nivel'], $niveles)) {
-        header('Location: dashboard.php?error=sin_permiso');
+        header('Location: /dashboard.php?error=sin_permiso');
         exit;
     }
 }

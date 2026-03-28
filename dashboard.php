@@ -25,7 +25,7 @@ include 'includes/header.php';
 <div class="page-header">
     <div>
         <div class="page-title">Panel de Inicio</div>
-        <div class="page-subtitle">Bienvenido al Sistema de Administración de Notas — <?= $anio_actual ?></div>
+        <div class="page-subtitle">Bienvenido al Sistema de Notas — <?= $anio_actual ?></div>
     </div>
 </div>
 
@@ -68,6 +68,17 @@ include 'includes/header.php';
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;">
 
             <?php if ($_SESSION['nivel'] <= 2): ?>
+<<<<<<< HEAD
+            <a href="./pages/logros.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">🏆</span>
+                <span>Logros e Indicadores</span>
+            </a>
+            <a href="/pages/listar_grupos.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">👥</span>
+                <span>Listar Grupos</span>
+            </a>
+            <a href="/pages/calificar.php" class="btn btn-secondary" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+=======
             <a href="./logros.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
                 <span style="font-size:24px">🏆</span>
                 <span>Logros e Indicadores</span>
@@ -77,12 +88,36 @@ include 'includes/header.php';
                 <span>Listar Grupos</span>
             </a>
             <a href="../proyecto/pages/calificar.php" class="btn btn-secondary" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+>>>>>>> b65bbf741f207bfba3bb280a67688b09acd84fea
                 <span style="font-size:24px">✏️</span>
                 <span>Calificar Estudiantes</span>
             </a>
             <?php endif; ?>
 
             <?php if ($_SESSION['nivel'] == 1): ?>
+<<<<<<< HEAD
+            <a href="/pages/personas.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">👤</span>
+                <span>Registrar Personas</span>
+            </a>
+            <a href="/pages/matricula.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">📋</span>
+                <span>Matrícula</span>
+            </a>
+            <a href="/pages/institucion.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">🏫</span>
+                <span>Institución</span>
+            </a>
+            <a href="/pages/usuarios.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">🔑</span>
+                <span>Usuarios</span>
+            </a>
+            <a href="/pages/asignar_materias.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+                <span style="font-size:24px">📚</span>
+                <span>Asignar Materias</span>
+            </a>
+            <a href="/pages/promocion.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+=======
             <a href="../proyecto/pages/personas.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
                 <span style="font-size:24px">👤</span>
                 <span>Registrar Personas</span>
@@ -104,12 +139,17 @@ include 'includes/header.php';
                 <span>Asignar Materias</span>
             </a>
             <a href="../proyecto/pages/promocion.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+>>>>>>> b65bbf741f207bfba3bb280a67688b09acd84fea
                 <span style="font-size:24px">🎓</span>
                 <span>Promoción</span>
             </a>
             <?php endif; ?>
 
+<<<<<<< HEAD
+            <a href="/pages/notas_estudiante.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+=======
             <a href="../proyecto/pages/notas_estudiante.php" class="btn btn-outline" style="justify-content:center; padding:20px; flex-direction:column; gap:8px;">
+>>>>>>> b65bbf741f207bfba3bb280a67688b09acd84fea
                 <span style="font-size:24px">📊</span>
                 <span>Ver Notas</span>
             </a>

@@ -46,6 +46,6 @@ function isEstudiante() {
 
 function sanitize($data) {
     global $conn;
-    return $conn->real_escape_string(trim($data));
+    return $conn->real_escape_string(trim($data ?? ''));
 }
 ?>

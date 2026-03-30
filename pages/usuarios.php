@@ -134,11 +134,11 @@ if ($is_admin && isset($_POST['action']) && $_POST['action'] === 'buscar_usuario
     $id_buscar = (int)$_POST['buscar_id'];
     // Trae los datos del usuario junto con su rol y nombre completo desde personas
     $r = $conn->query("SELECT u.*, n.descripcion as rol,
-                       CONCAT(p.primerNombre, ' ', p.primerApellido) as nombre_persona
-                       FROM usuarios u
-                       JOIN nivelusuario n ON u.idnivel = n.idNivel
-                       LEFT JOIN personas p ON p.identificacion = u.idUsuario
-                       WHERE u.idUsuario = $id_buscar");
+                        CONCAT(p.primerNombre, ' ', p.primerApellido) as nombre_persona
+                        FROM usuarios u
+                        JOIN nivelusuario n ON u.idnivel = n.idNivel
+                        LEFT JOIN personas p ON p.identificacion = u.idUsuario
+                        WHERE u.idUsuario = $id_buscar");
     $usuario_edit = $r && $r->num_rows > 0 ? $r->fetch_assoc() : null;
     if (!$usuario_edit) $error = "No se encontró usuario con ID $id_buscar.";
 }
@@ -148,11 +148,11 @@ if ($is_admin && isset($_POST['action']) && $_POST['action'] === 'buscar_usuario
 $lista_usuarios = null;
 if ($is_admin) {
     $lista_usuarios = $conn->query("SELECT u.*, n.descripcion as rol,
-                                   CONCAT(p.primerNombre, ' ', p.primerApellido) as nombre_persona
-                                   FROM usuarios u
-                                   JOIN nivelusuario n ON u.idnivel = n.idNivel
-                                   LEFT JOIN personas p ON p.identificacion = u.idUsuario
-                                   ORDER BY u.idnivel, u.username");
+                                    CONCAT(p.primerNombre, ' ', p.primerApellido) as nombre_persona
+                                    FROM usuarios u
+                                    JOIN nivelusuario n ON u.idnivel = n.idNivel
+                                    LEFT JOIN personas p ON p.identificacion = u.idUsuario
+                                    ORDER BY u.idnivel, u.username");
 }
 
 // Carga los niveles de usuario para el select del formulario

@@ -1,0 +1,30 @@
+/* ============================================
+   PAGINATION — Paginación de resultados
+   ============================================ */
+
+.pagination {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+/* Cada enlace o número de página */
+.pagination a,
+.pagination span {
+    padding: 6px 12px;
+    border-radius: var(--radio);
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid var(--crema-oscuro);
+    color: var(--verde-medio);
+    transition: var(--transicion);
+}
+
+/* Página activa y hover: fondo verde */
+.pagination a:hover,
+.pagination .current {
+    background: var(--verde-medio);
+    color: white;
+    border-color: var(--verde-medio);
+}

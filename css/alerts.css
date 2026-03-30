@@ -1,0 +1,44 @@
+/* ============================================
+   ALERTS — Mensajes de retroalimentación
+   Variantes: success, error, info, warning
+   ============================================ */
+
+/* Base de todas las alertas */
+.alert {
+    padding: 12px 16px;
+    border-radius: var(--radio);
+    margin-bottom: 16px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid;
+}
+
+/* Verde — operación exitosa */
+.alert-success {
+    background: #e8f8f0;
+    border-color: var(--verde-claro);
+    color: var(--verde-oscuro);
+}
+
+/* Rojo — error o validación fallida */
+.alert-error {
+    background: var(--rojo-suave);
+    border-color: var(--rojo);
+    color: var(--rojo);
+}
+
+/* Azul — información general */
+.alert-info {
+    background: #e8f4fd;
+    border-color: #3498db;
+    color: #1a5276;
+}
+
+/* Amarillo — advertencia */
+.alert-warning {
+    background: #fef9e7;
+    border-color: var(--dorado);
+    color: var(--marron);
+}

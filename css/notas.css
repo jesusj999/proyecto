@@ -1,0 +1,10 @@
+/* ============================================
+   NOTAS — Colores de desempeño académico
+   Usados para colorear las calificaciones
+   según el nivel de desempeño del estudiante
+   ============================================ */
+
+.nota-bajo     { color: #c0392b; font-weight: 700; } /* Rojo    — Desempeño Bajo */
+.nota-basico   { color: #e67e22; font-weight: 700; } /* Naranja — Desempeño Básico */
+.nota-alto     { color: #27ae60; font-weight: 700; } /* Verde   — Desempeño Alto */
+.nota-superior { color: #2980b9; font-weight: 700; } /* Azul    — Desempeño Superior */

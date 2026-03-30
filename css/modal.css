@@ -1,0 +1,45 @@
+/* ============================================
+   MODAL — Ventana emergente / diálogo
+   ============================================ */
+
+/* Fondo oscuro semitransparente que cubre toda la pantalla */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Al activarse, se muestra como flex */
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Caja blanca central del modal */
+.modal {
+    background: white;
+    border-radius: var(--radio-lg);
+    padding: 28px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: modalIn 0.2s ease;
+}
+
+/* Animación de entrada: escala de 90% a 100% con fade-in */
+@keyframes modalIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* Título del modal con línea dorada decorativa */
+.modal h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--verde-oscuro);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--dorado);
+}

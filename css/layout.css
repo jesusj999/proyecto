@@ -1,0 +1,36 @@
+/* ============================================
+   LAYOUT — Estructura general de la página
+   Contenedor principal y encabezado de sección
+   ============================================ */
+
+/* Contenedor central con ancho máximo */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 24px;
+}
+
+/* Encabezado de cada sección/página */
+.page-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--dorado);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Título principal de la sección */
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+/* Subtítulo descriptivo debajo del título */
+.page-subtitle {
+    font-size: 13px;
+    color: var(--texto-suave);
+    margin-top: 2px;
+}

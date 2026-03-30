@@ -1,0 +1,27 @@
+/* ============================================
+   UTILITIES — Clases de ayuda rápida
+   Equivalentes a los helpers de Bootstrap/Tailwind
+   para alineación, espaciado y visibilidad
+   ============================================ */
+
+/* Alineación de texto */
+.text-center     { text-align: center; }
+.text-right      { text-align: right; }
+
+/* Márgenes superiores */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+
+/* Márgenes inferiores */
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+
+/* Flexbox rápido */
+.flex            { display: flex; }
+.gap-2           { gap: 8px; }
+.items-center    { align-items: center; }
+.justify-between { justify-content: space-between; }
+
+/* Ocultar elementos */
+.hidden { display: none !important; }

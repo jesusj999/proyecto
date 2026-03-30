@@ -283,7 +283,7 @@ include '../includes/header.php'; // Carga el encabezado visual del sistema
     $u_editar = $usuario_edit ?? (!$is_admin ? $usuario_actual : null);
     if ($u_editar):
     ?>
-    <!-- Muestra info del usuario encontrado -->
+    <!-- Muestra info del Usuario encontrado -->
     <div class="alert alert-info" style="margin-bottom:16px">
         <strong>Nombre:</strong> <?= htmlspecialchars($u_editar['nombre_persona'] ?? $u_editar['username']) ?><br>
         <strong>Tipo de Usuario:</strong> <?= htmlspecialchars($u_editar['rol']) ?><br>

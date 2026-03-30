@@ -87,14 +87,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="login-divider"></div>
             <div class="login-title">Ingreso del Usuario</div>
 
-            <?php if ($error): ?>
+            <?php
+            // Verifica si la variable $error tiene algún contenido
+            // $error se define al inicio del archivo como cadena vacía ''
+            // Solo tendrá contenido si ocurrió algún problema
+            if ($error): ?>
+
+                <!-- Muestra una caja roja con el mensaje de error -->
+                <!-- htmlspecialchars() convierte caracteres especiales como < > & 
+         para evitar que se ejecute código malicioso en pantalla -->
                 <div class="alert alert-error">⚠️ <?= htmlspecialchars($error) ?></div>
+
             <?php endif; ?>
+            ```
+            <!-- 
+            Por ejemplo si el error es `"No se encontró estudiante con código 14189"` se mostraría así en pantalla:
+            ```
+            ⚠️ No se encontró estudiante con código 14189 -->
 
             <form method="POST">
+                <!-- Contenedor del campo de usuario -->
                 <div class="form-group">
+
+                    <!-- Etiqueta visible, al hacer clic lleva el cursor al input -->
                     <label for="username">👤 Usuario</label>
+
+                    <!-- Campo de texto para ingresar el username -->
+                    <!-- required=obligatorio, autofocus=cursor automático al cargar -->
+                    <!-- value mantiene el username escrito si el login falló -->
                     <input type="text" id="username" name="username" placeholder="Ingrese su username" required autofocus value="<?= htmlspecialchars($_POST['username'] ?? '') ?>">
+
                 </div>
                 <div class="form-group">
                     <label for="password">🔒 Contraseña</label>

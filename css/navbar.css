@@ -1,0 +1,76 @@
+/* ============================================
+   NAVBAR — Menú de navegación principal
+   Con soporte para submenús desplegables
+   ============================================ */
+
+.navbar {
+    background: rgba(0,0,0,0.2);
+    padding: 0 24px;
+    display: flex;
+    gap: 2px;
+    position: relative;
+}
+
+/* Cada ítem del menú (contiene el link y posiblemente un dropdown) */
+.nav-item {
+    position: relative;
+}
+
+/* Enlace del menú principal */
+.nav-link {
+    display: block;
+    padding: 10px 16px;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: var(--transicion);
+    white-space: nowrap;
+}
+
+/* Estado hover y activo: texto dorado + borde inferior dorado */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--dorado-claro);
+    border-bottom-color: var(--dorado);
+    background: rgba(255,255,255,0.08);
+}
+
+/* El dropdown se muestra al pasar el mouse sobre su nav-item */
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+/* Submenú desplegable */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--verde-oscuro);
+    min-width: 180px;
+    border-radius: 0 0 var(--radio) var(--radio);
+    box-shadow: var(--sombra-hover);
+    z-index: 200;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: none;
+    overflow: hidden;
+}
+
+/* Enlace dentro del dropdown */
+.dropdown a {
+    display: block;
+    padding: 10px 16px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 13px;
+    transition: var(--transicion);
+}
+
+/* Hover del dropdown: fondo más claro + sangría */
+.dropdown a:hover {
+    background: var(--verde-medio);
+    color: var(--dorado-claro);
+    padding-left: 22px;
+}

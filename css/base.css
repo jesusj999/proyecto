@@ -1,0 +1,20 @@
+/* ============================================
+   BASE / RESET
+   Estilos fundamentales del documento
+   ============================================ */
+
+/* Reinicia márgenes y usa el modelo de caja border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y fondo general de toda la aplicación */
+html, body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--crema);
+    color: var(--texto-oscuro);
+    font-size: 14px;
+    min-height: 100vh;
+}

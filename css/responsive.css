@@ -1,0 +1,36 @@
+/* ============================================
+   RESPONSIVE — Adaptación para móviles
+   Ajustes para pantallas menores a 768px
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Header más compacto */
+    .header-top {
+        padding: 10px 16px;
+    }
+
+    /* Título del header más pequeño */
+    .header-title h1 {
+        font-size: 14px;
+    }
+
+    /* Menos relleno lateral en el contenido */
+    .main-content {
+        padding: 16px;
+    }
+
+    /* Formularios en una sola columna */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Estadísticas en 2 columnas en lugar de 4 */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* El menú hace scroll horizontal si no cabe */
+    .navbar {
+        overflow-x: auto;
+    }
+}

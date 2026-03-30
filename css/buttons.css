@@ -1,0 +1,83 @@
+/* ============================================
+   BUTTONS — Botones y barra de acciones
+   Variantes: primary, secondary, danger,
+   outline, small e icon
+   ============================================ */
+
+/* Base de todos los botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    border: none;
+    border-radius: var(--radio);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transicion);
+    white-space: nowrap;
+}
+
+/* Verde degradado — acción principal (Guardar, Registrar) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+    color: white;
+}
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26,71,49,0.3);
+}
+
+/* Dorado — acción alternativa (Buscar, Exportar) */
+.btn-secondary {
+    background: var(--dorado);
+    color: var(--verde-oscuro);
+}
+.btn-secondary:hover {
+    background: var(--dorado-claro);
+    transform: translateY(-1px);
+}
+
+/* Rojo — acción destructiva (Eliminar, Anular) */
+.btn-danger {
+    background: var(--rojo);
+    color: white;
+}
+.btn-danger:hover {
+    background: #a93226;
+    transform: translateY(-1px);
+}
+
+/* Solo borde — acción secundaria (Cancelar, Limpiar) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--verde-medio);
+    color: var(--verde-medio);
+}
+.btn-outline:hover {
+    background: var(--verde-medio);
+    color: white;
+}
+
+/* Variante pequeña */
+.btn-sm {
+    padding: 5px 12px;
+    font-size: 12px;
+}
+
+/* Botón cuadrado solo con ícono */
+.btn-icon {
+    padding: 7px 10px;
+}
+
+/* Barra de botones: los agrupa en fila */
+.btn-toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}

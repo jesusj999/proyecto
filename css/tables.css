@@ -1,0 +1,86 @@
+/* ============================================
+   TABLES — Tablas de datos
+   Incluye variante compacta para calificaciones
+   ============================================ */
+
+/* Contenedor con scroll horizontal en pantallas pequeñas */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radio);
+    border: 1px solid var(--crema-oscuro);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+/* Encabezado: verde degradado */
+thead {
+    background: linear-gradient(to right, var(--verde-oscuro), var(--verde-medio));
+    color: white;
+}
+
+thead th {
+    padding: 11px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Filas del cuerpo */
+tbody tr {
+    border-bottom: 1px solid var(--crema-oscuro);
+    transition: background 0.15s;
+}
+
+/* Highlight al pasar el mouse */
+tbody tr:hover {
+    background: var(--dorado-suave);
+}
+
+/* Última fila sin borde inferior */
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody td {
+    padding: 10px 14px;
+    color: var(--texto-medio);
+}
+
+/* Links dentro de las celdas */
+tbody td a {
+    color: var(--verde-medio);
+    font-weight: 600;
+    text-decoration: none;
+}
+tbody td a:hover {
+    color: var(--verde-oscuro);
+    text-decoration: underline;
+}
+
+/* ---- Variante compacta para la tabla de calificaciones ---- */
+.tabla-calificacion {
+    font-size: 12px;
+}
+
+.tabla-calificacion th {
+    padding: 8px 6px;
+    font-size: 11px;
+}
+
+.tabla-calificacion td {
+    padding: 6px;
+}
+
+/* Campos dentro de la tabla de calificaciones */
+.tabla-calificacion input[type="text"],
+.tabla-calificacion select {
+    padding: 4px 6px;
+    font-size: 11px;
+    min-width: 60px;
+}

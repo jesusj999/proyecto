@@ -1,0 +1,53 @@
+/* ============================================
+   DASHBOARD — Tarjetas de estadísticas
+   Usadas en la página de inicio para mostrar
+   totales (alumnos, docentes, materias, etc.)
+   ============================================ */
+
+/* Grilla de tarjetas de estadística */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+/* Tarjeta individual */
+.stat-card {
+    background: white;
+    border-radius: var(--radio-lg);
+    padding: 20px;
+    box-shadow: var(--sombra);
+    border-left: 4px solid var(--dorado);
+    transition: var(--transicion);
+}
+
+/* Elevación al hacer hover */
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-hover);
+}
+
+/* Ícono grande encima del número */
+.stat-card .stat-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+/* El número principal en fuente elegante */
+.stat-card .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--verde-oscuro);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Descripción debajo del número */
+.stat-card .stat-label {
+    font-size: 12px;
+    color: var(--texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}

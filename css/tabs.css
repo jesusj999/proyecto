@@ -1,0 +1,41 @@
+/* ============================================
+   TABS — Pestañas de navegación interna
+   ============================================ */
+
+/* Contenedor de las pestañas */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid var(--crema-oscuro);
+    margin-bottom: 20px;
+    gap: 2px;
+}
+
+/* Cada pestaña */
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto-suave);
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px; /* El borde activo tapa el borde del contenedor */
+    transition: var(--transicion);
+    text-decoration: none;
+}
+
+/* Pestaña activa y hover */
+.tab:hover,
+.tab.active {
+    color: var(--verde-oscuro);
+    border-bottom-color: var(--dorado);
+}
+
+/* Contenido de cada pestaña: oculto por defecto */
+.tab-content {
+    display: none;
+}
+
+/* Solo el contenido activo es visible */
+.tab-content.active {
+    display: block;
+}

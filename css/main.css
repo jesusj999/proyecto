@@ -1,0 +1,49 @@
+/* ============================================
+   MAIN.CSS — Archivo principal de estilos
+   Centro Educativo La Florida
+   Sistema de Administración de Notas
+
+   IMPORTAR ESTE ARCHIVO en el <head> del HTML:
+   <link rel="stylesheet" href="css/main.css">
+
+   Orden de importación:
+   1. Variables  — debe ir PRIMERO (define los --colores)
+   2. Base       — reset y estilos del body
+   3. Header     — barra superior fija
+   4. Navbar     — menú y submenús
+   5. Layout     — contenedor y encabezado de sección
+   6. Cards      — tarjetas de contenido
+   7. Forms      — formularios y campos
+   8. Buttons    — botones y barra de acciones
+   9. Tables     — tablas de datos
+   10. Alerts    — mensajes de éxito/error/info
+   11. Badges    — etiquetas de estado y filtros
+   12. Dashboard — tarjetas de estadísticas
+   13. Pagination— paginación
+   14. Modal     — ventana emergente
+   15. Tabs      — pestañas
+   16. Login     — página de inicio de sesión
+   17. Notas     — colores de desempeño académico
+   18. Responsive— adaptación para móviles
+   19. Utilities — clases de ayuda rápida
+   ============================================ */
+
+@import url('variables.css');
+@import url('base.css');
+@import url('header.css');
+@import url('navbar.css');
+@import url('layout.css');
+@import url('cards.css');
+@import url('forms.css');
+@import url('buttons.css');
+@import url('tables.css');
+@import url('alerts.css');
+@import url('badges.css');
+@import url('dashboard.css');
+@import url('pagination.css');
+@import url('modal.css');
+@import url('tabs.css');
+@import url('login.css');
+@import url('notas.css');
+@import url('responsive.css');
+@import url('utilities.css');

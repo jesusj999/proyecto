@@ -1,0 +1,35 @@
+/* ============================================
+   BADGES — Etiquetas de estado
+   y barra de filtros de búsqueda
+   ============================================ */
+
+/* ---- Barra de filtros / búsqueda ---- */
+.filtros-bar {
+    background: var(--dorado-suave);
+    border: 1px solid var(--dorado-claro);
+    border-radius: var(--radio-lg);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+.filtros-bar .form-grid {
+    align-items: end;
+}
+
+/* ---- Etiquetas de estado (badges tipo píldora) ---- */
+.badge-estado {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Una variante de color por tipo/estado */
+.badge-activo     { background: #d4edda; color: #155724; } /* Verde */
+.badge-retirado   { background: #f8d7da; color: #721c24; } /* Rojo */
+.badge-admin      { background: #cce5ff; color: #004085; } /* Azul */
+.badge-docente    { background: #fff3cd; color: #856404; } /* Amarillo */
+.badge-estudiante { background: #d4edda; color: #155724; } /* Verde */

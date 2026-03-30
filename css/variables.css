@@ -1,0 +1,47 @@
+/* ============================================
+   VARIABLES GLOBALES
+   Colores, sombras, bordes y transiciones
+   del sistema institucional.
+   Importar este archivo PRIMERO en main.css
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+:root {
+    /* Paleta de verdes institucionales */
+    --verde-oscuro: #1a4731;
+    --verde-medio: #2d6a4f;
+    --verde-claro: #52b788;
+    --verde-suave: #d8f3dc;
+
+    /* Paleta dorada para acentos */
+    --dorado: #c9a84c;
+    --dorado-claro: #f0d080;
+    --dorado-suave: #fdf6e0;
+
+    /* Tonos crema para fondos */
+    --crema: #faf7f0;
+    --crema-oscuro: #f0ebe0;
+
+    /* Otros colores */
+    --marron: #6b4c2a;
+    --blanco: #ffffff;
+    --rojo: #c0392b;
+    --rojo-suave: #fce4e1;
+
+    /* Escala de grises para texto */
+    --texto-oscuro: #1a1a1a;
+    --texto-medio: #444;
+    --texto-suave: #777;
+
+    /* Sombras */
+    --sombra: 0 2px 12px rgba(26,71,49,0.12);
+    --sombra-hover: 0 6px 24px rgba(26,71,49,0.2);
+
+    /* Bordes redondeados */
+    --radio: 6px;
+    --radio-lg: 12px;
+
+    /* Transición global */
+    --transicion: all 0.2s ease;
+}

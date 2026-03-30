@@ -208,7 +208,7 @@ include '../includes/header.php';
         <input type="hidden" name="action" value="guardar">
 
         <div class="form-group mb-2">
-            <label>Identificación Persona <span class="req">*</span></label>
+            <label>Identificación Usuario <span class="req">*</span></label>
             <input type="number" name="idPersona" required>
         </div>
         <div class="form-group mb-2">
